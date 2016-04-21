@@ -14,23 +14,28 @@
 
 <body>
   <!-- --------------------------- -->
-  <!-- NAV -->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Howlr</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Howlr</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Pack</a></li>
-        <li><a href="badges.html">Howls</a></li>
+        <li><a href="#">Pack</a></li>
+        <li><a href="#">Howls</a></li>
       </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Pack</a></li>
-        <li><a href="badges.html">Howls</a></li>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Pack</a></li>
+        <li><a href="#">Howls</a></li>
       </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
-  <%= yield %>
+
+
+      <%= yield %>
+
+
+
 
 <!-- --------------------------- -->
 <!-- FOOTER -->
