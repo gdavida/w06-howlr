@@ -1,17 +1,35 @@
 
+  <% if @wolf.errors.any? %>
+    <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel">
+          <h2>Errors:</h2>
+            <ul>
+              <% @wolf.errors.full_messages.each do |e| %>
+                <li><%= e %></li>
+              <% end %>
+            </ul>
+        </div>
+      </div>
+    </div>
+  <% end %>        
+
+
+
+
  <div class="row">
-    <form class="col s12">
+    <form action="/wolves/<%= @wolf.id %>" method="post" class="col s12">
       <div class="row">
         <div class="input-field col xs12 s12 m4">
-          <input id="name" type="text" class="validate">
+          <input id="name" type="text" class="validate" value="<%= @wolf.name %>">
           <label for="name">Name</label>
         </div>
         <div class="input-field col xs12 s12 m4">
-          <input id="profile_picture_url" type="text" class="validate">
-          <label for="profil_picture_url">Profile Picture URL</label>
+          <input id="picture_url" type="text" class="validate" value="<%= @wolf.picture_url %>">
+          <label for="picture_url">Profile Picture URL</label>
         </div>
         <div class="input-field col xs12 s12 m4">
-          <input id="caption" type="text" class="validate" length="80">
+          <input id="caption" type="text" class="validate" length="80" value="<%= @wolf.caption %>">
           <label for="caption">Caption</label>
         </div>
       </div>

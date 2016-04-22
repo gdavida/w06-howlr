@@ -1,32 +1,53 @@
 
+  <% if @howl.errors.any? %>
+    <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel">
+          <h2>Errors:</h2>
+            <ul>
+              <% @howl.errors.full_messages.each do |e| %>
+                <li><%= e %></li>
+              <% end %>
+            </ul>
+        </div>
+      </div>
+    </div>
+  <% end %>        
+
+
+
 <div class="row">
-  <form class="col s12">
+  <form action="/howls/<%= howl.id %>" method="post" class="col s12">
     <div class="row">
       <div class="input-field col xs12 s8">
-        <input id="howl" type="text" class="validate">
+        <input id="howl" type="text" class="validate" value="<%= @howl.howl %>" >
         <label for="howl">What are you howling about?</label>
       </div>
       <div class="input-field col xs12 s8">
-        <input id="profile_picture_url" type="text" class="validate">
-        <label for="profil_picture_url">Wanna share a picture?</label>
+        <input id="share_image_url" type="text" class="validate" value="<%= @howl.share_image_url %>">
+        <label for="share_image_url">Wanna share a picture?</label>
       </div>
   <div class="input-field col xs12 s8">
+  <!-- DROPDOWN PICK A WOLF -->
     <select class="icons">
       <option value="" disabled selected>Who's Howling?</option>
-      <option value="name_1" data-icon="http://lorempixel.com/20/20" class="circle right">Amarok</option>
-      <option value="name_2" data-icon="http://lorempixel.com/20/20" class="circle right">Fenrir</option>
-      <option value="name_3" data-icon="http://lorempixel.com/20/20" class="circle right">Bigby Wolf</option>
+      <% @wolves.each do |w| %>
+        <option value="" data-icon="<%= w.picture_url %>" class="circle right">
+          <%= w.name %>
+        </option>
+      <% end %>
     </select>
     <label>Who's Howling?</label>
   </div><br><br>
     </div><br><br>
+    <!-- SUBMIT -->
     <div class="row">
       <div class="left">
-        <a class="waves-effect waves-light btn-large">Back</a>
+        <a class="waves-effect waves-light btn-large" href="/howls">Back</a>
       </div>
       <div class="right">
         <button class="btn waves-effect waves-light" type="submit" name="action">Howl
-          <i class="material-icons right">send</i>
+          <i class="material-icons right">submit</i>
         </button>
       </div>
     </div>
