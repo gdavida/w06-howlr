@@ -24,6 +24,7 @@ get "/wolves/?" do
 end
 
 
+
 #-- NEW ----------
 # my "new" page for wolves = a form to to add a new wolf into the table
 #(my @ variable is single because I am only dealing with a single wolf- the ONE wolf I want to add here)
@@ -31,13 +32,11 @@ end
 #
 get "/wolves/new/?" do
 	@wolf = Wolf.new
+  @howls = Howl.all
+  @howl = Howl.find_by_id(params['id'])
 	erb :"wolves/new"
 end
 
-# ______________________
-  @toy = Toy.new(name: params['name'],
-                 upc: params['upc'],
-                 tll_age_id: params['tll_age_id'])__________________
 
 # ------- POST ------------
 # ________________________________________
@@ -51,6 +50,9 @@ post "/wolves/?" do
 	@wolf = Wolf.new(name: params['name'],
 										picture_url: params['picture_url'],
 										caption: params['caption'])
+  @howls = Howl.all
+  @howl = Howl.find_by_id(params['id'])
+
 	if @wolf.save
 		redirect to("/wolves")
 	else

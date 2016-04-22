@@ -6,14 +6,22 @@
 <h4>Here are the last 5 howls from your pack.</h4>
 
 
+    <% @howls.each do |h| %>
       <div class="row">
         <div class="col s12 m6">
           <div class="card">
             <div class="card-content">
-                <span class="card-title">Bigby Wolf</span>
-                <img src="http://lorempixel.com/40/40" alt="" class="circle right">
+                <span class="card-title">
+                  <a href="/howls/<%= h.id %>" >
+                    <%= h.howl %>
+                  </a>
+                </span>
+                <img src="<% h.wolf.picture_url %>" alt="" class="circle right">
                 <a class="right secondary-content">Today</a>
-                <p>Still trying to find Toad... He needs to go back to the farm. Howl at me if you see him. He drives a taxi.</p>
+                <% if h.share_image_url %>
+                  <img src="<% h.share_image_url %>" alt="">
+                <% end %>
+                <p><% h.howl %></p>
             </div>
             <div class="card-action">
               <a href="#">Howl Back (0)</a>
@@ -21,6 +29,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>       
+     <% end %>
+
 
   <a class="waves-effect waves-light btn">See Previous Howls</a>
+
+  <a  href="/howls/new" class="btn-floating btn-large waves-effect waves-light right"><i class="material-icons">add</i></a>

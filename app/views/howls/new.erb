@@ -17,22 +17,22 @@
 
 
 <div class="row">
-  <form action="/howls/<%= howl.id %>" method="post" class="col s12">
+  <form action="/howls/<%= @howl.id %>" method="post" class="col s12">
     <div class="row">
       <div class="input-field col xs12 s8">
-        <input id="howl" type="text" class="validate" value="<%= @howl.howl %>" >
+        <input name="howl" type="text" class="validate" value="<%= @howl.howl %>" >
         <label for="howl">What are you howling about?</label>
       </div>
       <div class="input-field col xs12 s8">
-        <input id="share_image_url" type="text" class="validate" value="<%= @howl.share_image_url %>">
+        <input name="share_image_url" type="text" class="validate" value="<%= @howl.share_image_url %>">
         <label for="share_image_url">Wanna share a picture?</label>
       </div>
   <div class="input-field col xs12 s8">
   <!-- DROPDOWN PICK A WOLF -->
-    <select class="icons">
+    <select class="icons" id="wolf" name="wolf_id">
       <option value="" disabled selected>Who's Howling?</option>
       <% @wolves.each do |w| %>
-        <option value="" data-icon="<%= w.picture_url %>" class="circle right">
+        <option value="<%= w.id %>" data-icon="<%= w.picture_url %>" class="circle right">
           <%= w.name %>
         </option>
       <% end %>
@@ -53,4 +53,5 @@
     </div>
   </form>
 </div>
+
 
