@@ -1,18 +1,21 @@
-
+<div class="row">
+<div class="col s12 m5">
   <h4>You have <%= @wolves.count %> in your pack</h4>
 
-  <% @wolves.each do |w| %>
     <ul class="collection">
+  <% @wolves.each do |w| %>
         <li class="collection-item avatar">
           <img src="<%= w.picture_url %>" alt="" class="circle">
           <span class="title"><%= w.name %></span>
           <p><%= w.caption %></p>
           <p class="secondary-content">3 howls</p>
         </li>
-      </ul>
-  <% end %>
-  
 
-      <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
-      <i class="material-icons right">send</i>
-    </button>
+      <% end %>
+      </ul>
+  
+      <div>
+        <a class="btn waves-effect waves-light right red darken-4" href="/wolves/new">New Pack Member</a>
+      </div>
+</div>
+</div>

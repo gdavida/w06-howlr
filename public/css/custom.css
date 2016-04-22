@@ -1,3 +1,33 @@
+a {
+	color: #37474f; 
+}
+
+h4 {
+	font-size: 2rem;
+	text-align:center;
+}
+
+
+/* LAYOUT.ERB && HOME.ERB*/
+/**************************/
+.button-collapse {
+	color: #b0bec5 ;
+}
+
+.footerText {
+	color: #37474f ;
+	font-size: 1.2em;
+	font-weight: 400;
+}
+
+/* HOWLS/INDEX */
+/**************************/
+
+.howlCard .secondary-content {
+	margin:15px;
+	color: #37474f
+}
+
 .howlProfileImage {
     max-width: 40px;
 }
@@ -5,3 +35,32 @@
 .howlImage {
 	max-width: 100%;
 }
+.previousHowlsButton {
+	margin-top: 12px;
+}
+
+.howlTimeline {
+	/* media query*//* @601 and above*/
+}
+
+
+/* HOWLS/NEW */
+/**************************/
+
+/* WOLVES/INDEX */
+/**************************/
+
+
+.howlProfileImage {
+    max-width: 40px;
+}
+
+.howlImage {
+	max-width: 100%;
+}
+
+
+
+/* WOLVES/NEW */
+/**************************/
+

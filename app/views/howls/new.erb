@@ -1,9 +1,11 @@
 
+<div class="row">
+<div class="col s12 m6">
+
   <% if @howl.errors.any? %>
     <div class="row">
       <div class="col s12 m5">
         <div class="card-panel">
-          <h2>Errors:</h2>
             <ul>
               <% @howl.errors.full_messages.each do |e| %>
                 <li><%= e %></li>
@@ -43,11 +45,10 @@
     <!-- SUBMIT -->
     <div class="row">
       <div class="left">
-        <a class="waves-effect waves-light btn-large" href="/howls">Back</a>
+        <a class="waves-effect waves-light btn red lighten-2" href="/howls">Back</a>
       </div>
       <div class="right">
-        <button class="btn waves-effect waves-light" type="submit" name="action">Howl
-          <i class="material-icons right">submit</i>
+        <button class="btn waves-effect waves-light red darken-4" type="submit" name="action">Howl
         </button>
       </div>
     </div>

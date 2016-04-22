@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 2) do
   end
 
   create_table "wolves", force: :cascade do |t|
-    t.string  "name",        null: false
-    t.string  "picture_url", null: false
-    t.integer "caption",     null: false
+    t.string "name",        null: false
+    t.string "picture_url", null: false
+    t.string "caption",     null: false
   end
 
 end
