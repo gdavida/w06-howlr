@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 2) do
   enable_extension "plpgsql"
 
   create_table "howls", force: :cascade do |t|
-    t.string  "howl"
-    t.integer "wolf_id"
+    t.string  "howl",            null: false
+    t.integer "wolf_id",         null: false
     t.string  "share_image_url"
     t.integer "likes"
   end
 
   create_table "wolves", force: :cascade do |t|
-    t.string  "name"
-    t.string  "picture_url"
-    t.integer "caption"
+    t.string  "name",        null: false
+    t.string  "picture_url", null: false
+    t.integer "caption",     null: false
   end
 
 end

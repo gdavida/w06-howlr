@@ -13,13 +13,13 @@
             <div class="card-content">
                 <span class="card-title">
                   <a href="/howls/<%= h.id %>" >
-                    <%= h.howl %>
+                    <%= h.wolf.name %>
                   </a>
                 </span>
-                <img src="<% h.wolf.picture_url %>" alt="" class="circle right">
+                <img src="<%= h.wolf.picture_url %>" alt="" class="howlProfileImage circle right">
                 <a class="right secondary-content">Today</a>
-                <% if h.share_image_url %>
-                  <img src="<% h.share_image_url %>" alt="">
+                <% if h.share_image_url? %>
+                  <img src="<%= h.share_image_url %>" alt="" class="howlImage">
                 <% end %>
                 <p><% h.howl %></p>
             </div>
