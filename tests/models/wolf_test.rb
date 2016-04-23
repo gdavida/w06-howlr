@@ -3,7 +3,7 @@ require_relative  "../test_helper"
 class WolfTest < Minitest::Test
   
   def test_invalid_without_name
-    w = Wolf.new(name: "Bob", picture_url: "www.picture.com/1234")
+    w = Wolf.new(name: "Bob", picture_url: "www.picture.com/1234", caption: "This is about me.")
     assert(w.valid?, "should be valid with a name")
 
     w.name = nil
@@ -11,7 +11,7 @@ class WolfTest < Minitest::Test
   end
 
   def test_invalid_without_picture_url
-    w = Wolf.new(name: "Bob", picture_url: "www.picture.com/1234")
+    w = Wolf.new(name: "Bob", picture_url: "www.picture.com/1234", caption: "This is about me.")
     assert(w.valid?, "should be valid with picture_url")
 
     w.picture_url = nil

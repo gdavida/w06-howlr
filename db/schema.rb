@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 3) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "howlbacks", force: :cascade do |t|
+    t.integer "howl_id",            null: false
+    t.integer "wolf_id",            null: false
+    t.string  "response_image_url"
+    t.integer "likes"
+    t.string  "message"
+  end
 
   create_table "howls", force: :cascade do |t|
     t.string  "howl",            null: false

@@ -1,7 +1,11 @@
-1. HABTM Forms
-2. Checkboxes for 1-Many (Ryan)
-3. Setting foreign keys (form level) (Jay)
-4. Date dropdown - Datepicker (Jay, Ed)
-  + datepicker
-  + virtual attributes
-  + Dates in seed file
+
+- [ ]likes
+	-write out the process in words
+	-plan the method/route
+- [ ] wolves/show
+	-page with profile at top and list of howls underneath
+- [ ] howls/edit
+	-page with main howl at top and list of responses underneath with form to add response
+- [ ]
+- [ ]
+- [ ] 

@@ -21,3 +21,9 @@ Howl.create!(howl:"Hint: I'm the wolf.", wolf_id: 4, share_image_url: "https://s
 Howl.create!(howl:"Think about what happens for each page if there are no wolves in the database.", wolf_id: 4, likes: 0)
 Howl.create!(howl:"Don't try to be a hero.", wolf_id: 4, likes: 1)
 
+
+Howlback.create!(howl_id:1, wolf_id:2, response_image_url:"http://s2.quickmeme.com/img/c7/c76aca0a6baf816d36f703f1136d0fb8c7c28cb31a7f729e567398602f2df669.jpg", likes: 0, message: "I agree! Have you seen this?!")
+Howlback.create!(howl_id:1, wolf_id:3, likes: 0, message: "No way!!!!")
+Howlback.create!(howl_id:1, wolf_id:2, response_image_url:"http://cdn.photonesta.com/images/assets.diylol.com/hfs/5b2/36a/a43/resized/dwight-meme-generator-lone-wolf-false-wolves-live-in-packs-and-are-never-alone-34d6cd.jpg", likes: 0, message: "I agree! Have you seen this?!")
+
+
