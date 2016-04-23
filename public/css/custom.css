@@ -10,6 +10,11 @@ h4 {
 
 /* LAYOUT.ERB && HOME.ERB*/
 /**************************/
+.nav-wrapper {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
 .button-collapse {
 	color: #b0bec5 ;
 }
@@ -29,7 +34,7 @@ h4 {
 }
 
 .howlProfileImage {
-    max-width: 40px;
+  max-width: 40px;
 }
 
 .howlImage {
@@ -59,7 +64,9 @@ h4 {
 	max-width: 100%;
 }
 
-
+.bioCaption {
+	font-weight: 300;
+}
 
 /* WOLVES/NEW */
 /**************************/

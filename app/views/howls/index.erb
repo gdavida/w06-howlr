@@ -1,6 +1,6 @@
 
 <div class="row">
-<div class="col s12 m6">
+<div class="col s12 m6 offset-m3">
   <div class="row">
     <a class="waves-effect waves-light btn left red darken-4" href="/howls/new">Need to howl?</a>
     <a class="waves-effect waves-light btn right red darken-4" href="/wolves">See the Pack</a>
@@ -17,7 +17,7 @@
                     <%= h.wolf.name %>
                 </span>
                 <img src="<%= h.wolf.picture_url %>" alt="" class="howlProfileImage circle right">
-                <a class="right secondary-content">Today</a>
+                <a class="right secondary-content">Today</a><br>
                 <% if h.share_image_url? %>
                   <img src="<%= h.share_image_url %>" alt="" class="howlImage">
                 <% end %>
