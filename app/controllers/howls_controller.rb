@@ -19,7 +19,7 @@
 # the erb file is where I code what exactly that list will look like
 #
 get "/howls/?" do
-	@howls = Howl.all
+	@howls = Howl.where(id: [1, 2, 3, 4, 5])
 	erb :"howls/index"
 end
 
@@ -47,8 +47,26 @@ get "/howls/:id/?" do
   @wolf = Wolf.find_by_id(params['id'])
   @howlbacks = Howlback.all
   @howlback = Howlback.find_by_id(params['id'])
+  @howl_responses = Howlback.where(howl_id: (params['id']))
   erb :"howls/show"
 end
+
+
+#-- HOWLBACK FORM ---------
+# When I want to look futher at a specific record I will look it up by its primary key ("id")
+# In my erb file I format what information about each record I want to show, and in this case the erb file will a list of all howlbacks for the specific howls
+#
+get "/howls/:id/howlbacks?" do
+  @howl = Howl.find_by_id(params['id'])
+  @wolves = Wolf.all
+  @wolf = Wolf.find_by_id(params['id'])
+  @howlbacks = Howlback.all
+  @howlback = Howlback.find_by_id(params['id'])
+  @howl_responses = Howlback.where(howl_id: (params['id']))
+  erb :"howls/show_form"
+end
+
+
 
 # ________________________________________
 

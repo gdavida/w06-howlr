@@ -6,7 +6,7 @@
   <div class="col s12 m6 offset-m3">
     <div class="card">
       <div class="card-content howlCard">
-        <span class="card-title" href="/howls/<%= @howlid %>"><%= @howl.wolf.name %></span>
+        <span class="card-title" href="/howls/<%= @howl.id %>"><%= @howl.wolf.name %></span>
         <img src="<%= @howl.wolf.picture_url %>" alt="" class="howlProfileImage circle right">
         <a class="right secondary-content">Today</a><br>
         <img src="<%= @howl.share_image_url %>" alt="" class="howlImage">
@@ -29,7 +29,7 @@
   <div class="row">
     <div class="col s11 offset-s1 m5 offset-m4">
       <ul class="collection">
-      <% @howlbacks.each do |h| %>
+      <% @howl_responses.each do |h| %>
         <li class="collection-item avatar">
           <img src="<%= h.wolf.picture_url %>" alt="" class="circle">
           <span class="title"><%= h.wolf.name %></span>
@@ -44,9 +44,14 @@
       </ul>
     </div>
   </div>
+    <div class="row">
+      <div class="col s11 offset-s1 m5 offset-m4 right"> 
+        <a class="waves-effect waves-light btn red lighten-2" href="/howls/<%= params['id']%>/howlbacks#form">Howlback</a>
+      </div>
+    </div>
+  </div>
 </div>
        
-
 
 
 <!-- 
@@ -60,9 +65,6 @@
           <div class="row">
             <div class="left">
               <a class="waves-effect waves-light btn red lighten-2" href="/howls">Back</a>
-            </div>
-            <div class="right">
-              <a class="btn-floating btn-large waves-effect waves-light red darken-4" href="/responses/new"><i class="material-icons">add</i></a>
             </div>
           </div>
         </div>

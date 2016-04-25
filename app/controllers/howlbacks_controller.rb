@@ -58,7 +58,7 @@ end
 post "/howlbacks/?" do
 	@howlback = Howlback.new(howl_id: params['howl_id'],
                  wolf_id: params['wolf_id'],
-                 howlback_image_url: params['howlback_image_url'],
+                 response_image_url: params['howlback_image_url'],
                  likes: params['likes'],
                  message: params['message'])
   @wolves = Wolf.all

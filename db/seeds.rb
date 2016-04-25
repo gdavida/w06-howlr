@@ -25,6 +25,8 @@ Howl.create!(howl:"Don't try to be a hero.", wolf_id: 4, likes: 1)
 Howlback.create!(howl_id:1, wolf_id:2, response_image_url:"http://s2.quickmeme.com/img/c7/c76aca0a6baf816d36f703f1136d0fb8c7c28cb31a7f729e567398602f2df669.jpg", likes: 0, message: "Right?!")
 Howlback.create!(howl_id:1, wolf_id:3, likes: 0, message: "No way!!!!")
 Howlback.create!(howl_id:1, wolf_id:2, likes: 0, message: "I agree!")
-Howlback.create!(howl_id:2, wolf_id:4, response_image_url:"http://cdn.photonesta.com/images/assets.diylol.com/hfs/5b2/36a/a43/resized/dwight-meme-generator-lone-wolf-false-wolves-live-in-packs-and-are-never-alone-34d6cd.jpg", likes: 0, message: "YESSSS!!!")
+Howlback.create!(howl_id:2, wolf_id:4, likes: 0, message: "YESSSS!!!")
+Howlback.create!(howl_id:2, wolf_id:2, likes: 0, message: "I agree!")
+Howlback.create!(howl_id:3, wolf_id:4, response_image_url:"http://cdn.photonesta.com/images/assets.diylol.com/hfs/5b2/36a/a43/resized/dwight-meme-generator-lone-wolf-false-wolves-live-in-packs-and-are-never-alone-34d6cd.jpg", likes: 0, message: "Exactly.")
 
 
