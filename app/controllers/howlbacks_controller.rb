@@ -22,6 +22,11 @@
 #
 get "/howlbacks/?" do
 	@howlbacks = Howlback.all
+	@howlback = Howlback.find_by_id(params['id'])
+  @wolves = Wolf.all
+  @wolf = Wolf.find_by_id(params['id'])
+  @howls = Howl.all
+  @howl = Howl.find_by_id(params['id'])
 	erb :"howlbacks/index"
 end
 

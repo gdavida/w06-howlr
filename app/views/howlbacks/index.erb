@@ -6,11 +6,11 @@
   <div class="col s12 m6 offset-m3">
     <div class="card">
       <div class="card-content howlCard">
-        <span class="card-title" href="/howls/1" >John</span>
-        <img src="https://s3-us-west-2.amazonaws.com/wolfimages/wolf-1.jpg" alt="" class="howlProfileImage circle right">
+        <span class="card-title" href="/howlbacks/<%= @howlback_id %>"><%= @wolf.name %></span>
+        <img src="<%= @howl.picture_url %>" alt="" class="howlProfileImage circle right">
         <a class="right secondary-content">Today</a><br>
-        <img src="https://s3-us-west-2.amazonaws.com/wolfimages/share-1.jpg" alt="" class="howlImage">
-        <p>Aroooooooooo!!</p>
+        <img src="<%= @howl.share_image_url %>" alt="" class="howlImage">
+        <p><%= @howl.howl %></p>
       </div>
     <div class="card-action">
         <a href="#">Howl Back (0)</a>
@@ -64,7 +64,7 @@
               <a class="waves-effect waves-light btn red lighten-2" href="/howls">Back</a>
             </div>
             <div class="right">
-              <a  href="/howlbacks/new" class="btn-floating btn-large waves-effect waves-light red darken-4"><i class="material-icons">add</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light red darken-4" href="/responses/new"><i class="material-icons">add</i></a>
             </div>
           </div>
         </div>

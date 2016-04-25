@@ -14,7 +14,9 @@
           <div class="card">
             <div class="card-content howlCard">
                 <span class="card-title" href="/howls/<%= h.id %>" >
-                    <%= h.wolf.name %>
+                    <a href="/howls/<%= h.id %>">
+                      <%= h.wolf.name %>
+                    </a>
                 </span>
                 <img src="<%= h.wolf.picture_url %>" alt="" class="howlProfileImage circle right">
                 <a class="right secondary-content">Today</a><br>
@@ -24,7 +26,7 @@
                 <p><%= h.howl %></p>
             </div>
             <div class="card-action">
-              <a href="/howlbacks">Howl Back (0)</a>
+              <a href="/howls/<%= h.id %>">Howl Back (0)</a>
               <a href="#">Like (0)</a>
             </div>
           </div>      
@@ -36,3 +38,15 @@
   <a  href="/howls/new" class="btn-floating btn-large waves-effect waves-light right red darken-4"><i class="material-icons">add</i></a>
         </div>
       </div> 
+
+
+
+
+
+
+
+
+
+
+
+

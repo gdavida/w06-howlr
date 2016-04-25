@@ -6,8 +6,8 @@
   <div class="col s12 m6 offset-m3">
     <div class="card">
       <div class="card-content howlCard">
-        <span class="card-title" href="/howls/<%= @howl.id %>"><%= @howl.wolf.name %></span>
-        <img src="<%= @howl.picture_url %>" alt="" class="howlProfileImage circle right">
+        <span class="card-title" href="/howls/<%= @howlid %>"><%= @howl.wolf.name %></span>
+        <img src="<%= @howl.wolf.picture_url %>" alt="" class="howlProfileImage circle right">
         <a class="right secondary-content">Today</a><br>
         <img src="<%= @howl.share_image_url %>" alt="" class="howlImage">
         <p><%= @howl.howl %></p>
@@ -29,20 +29,18 @@
   <div class="row">
     <div class="col s11 offset-s1 m5 offset-m4">
       <ul class="collection">
+      <% @howlbacks.each do |h| %>
         <li class="collection-item avatar">
-          <img src="https://s3-us-west-2.amazonaws.com/wolfimages/wolf-8.jpg" alt="" class="circle">
-          <span class="title">Name</span>
-          <p class="responseText">Your response is too long, no one is ever gonna read it- especially not you. Responses should be 140 characters or less.
+          <img src="<%= h.wolf.picture_url %>" alt="" class="circle">
+          <span class="title"><%= h.wolf.name %></span>
+          <% if h.response_image_url? %>
+                  <img src="<%= h.response_image_url %>" alt="" class="howlImage">
+                <% end %>
+          <p class="responseText"><%= h.message %>
           </p>
           <a href="#!" class="secondary-content">Today</a>
         </li>
-        <li class="collection-item avatar">
-          <img src="https://s3-us-west-2.amazonaws.com/wolfimages/wolf-7.jpg" alt="" class="circle">
-          <span class="title">Name</span>
-          <p class="responseText">WAHHHHHHHH!!!
-          </p>
-          <a href="#!" class="secondary-content">Today</a>
-        </li>
+      <% end %>
       </ul>
     </div>
   </div>

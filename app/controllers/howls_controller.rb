@@ -36,6 +36,20 @@ get "/howls/new/?" do
 	erb :"howls/new"
 end
 
+
+#-- SHOW ---------
+# When I want to look futher at a specific record I will look it up by its primary key ("id")
+# In my erb file I format what information about each record I want to show, and in this case the erb file will a list of all howlbacks for the specific howls
+#
+get "/howls/:id/?" do
+  @howl = Howl.find_by_id(params['id'])
+  @wolves = Wolf.all
+  @wolf = Wolf.find_by_id(params['id'])
+  @howlbacks = Howlback.all
+  @howlback = Howlback.find_by_id(params['id'])
+  erb :"howls/show"
+end
+
 # ________________________________________
 
 # ------- POST ------------
